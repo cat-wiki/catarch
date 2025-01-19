@@ -1,0 +1,92 @@
+---
+# catarch tracker file
+# This file is used to track legal documents
+name: Apple # name of the entity
+type: company # type of entity (e.g. company, government, other)
+fetchSchedule: monthly # Default fetch schedule for all documents of this company
+entries: # List of legal documents for this company
+  - name: Apple Website Terms of Use # Document name
+    type: tos # Document type
+    language: en # Document language
+    fetchSchedule: weekly  # Override the default fetch schedule for this document
+    location: us  # Optional: specify a region or country
+    parser: html  # Optional: specify the parser to use for this document
+    url: https://www.apple.com/legal/internet-services/terms/site.html
+    notes: "Main site terms of use." # Optional: additional information
+    selectors: # Optional: specify HTML elements to extract data from
+      # For example, how to select specific HTML nodes for data extraction:
+      content: "main>div" # CSS selector for the main content
+      lastUpdated: "span.date-updated" # CSS selector for the last updated date
+      versionLabel: "span.version" # CSS selector for the version label
+  - name: Apple Privacy Policy
+    type: privacy
+    language: en
+    url: https://www.apple.com/legal/privacy/en-ww/
+    notes: "Detailed data usage and privacy statements."
+  - name: Apple Cookie Policy
+    type: cookie
+    language: en
+    url: https://www.apple.com/legal/privacy/en-ww/cookies/
+    notes: "Information about cookies Apple uses."
+  - name: Apple Mac Apps EULA
+    type: eula
+    language: en
+    url: https://www.apple.com/legal/macapps/stdeula/
+    notes: "Standard end-user license agreement for Mac apps."
+  - name: Apple Embedded Mac Hardware Warranty
+    type: warranty
+    language: en
+    url: https://www.apple.com/legal/warranty/products/embedded-mac-warranty-us.html
+  - name: Apple DMCA Policy
+    type: dmca
+    language: en
+    url: https://www.apple.com/de/legal/intellectual-property/guidelinesfor3rdparties.html
+  - name: Apple iTunes SLA
+    type: sla
+    language: en
+    url: https://www.apple.com/legal/sla/docs/iTunes.pdf
+    # PDF files might require a different parser; you can note that here:
+    parser: pdf
+    notes: "iTunes Software License Agreement."
+  - name: Apple DSA
+    type: other
+    language: en
+    url: https://www.apple.com/legal/dsa/
+---
+name: Google
+type: company
+fetchSchedule: weekly
+entries:
+  - name: Google Play Terms of Service
+    type: tos
+    language: en
+    url: https://play.google.com/intl/en_US/about/play-terms/
+    notes: "Google Play store terms, includes app developer and user guidelines."
+  - name: Google GDPR Statement
+    type: gdpr
+    language: en
+    url: https://policies.google.com/privacy
+    notes: "GDPR compliance overview."
+  - name: Google CCPA Policy
+    type: ccpa
+    language: en
+    url: https://policies.google.com/privacy/ccpa
+    selectors:
+      content: "div.ccpa-container"
+      lastUpdated: "div.ccpa-container .date-updated"
+    notes: "Details on how Google handles CCPA requests."
+  - name: YouTube Children Privacy Policy
+    type: children_privacy
+    language: en
+    url: https://www.youtube.com/intl/en/yt/about/policies/#children-privacy
+    notes: "Contains children's privacy policies for YouTube."
+---
+name: Microsoft
+type: company
+fetchSchedule: weekly
+entries:
+  - name: Microsoft Services Agreement
+    type: tos
+    language: en
+    url: https://www.microsoft.com/en/servicesagreement/
+    notes: "Terms of service for Microsoft services."

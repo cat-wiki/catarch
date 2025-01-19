@@ -1,0 +1,46 @@
+{
+  "name": "@cat-wiki/arch",
+  "version": "1.0.0",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "bin",
+    "tracker.yml",
+    ".catarchrc.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "./bin/catarch"
+  },
+  "bin": {
+    "catarch": "./bin/catarch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-only",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "pdf-parse": "^1.1.1",
+    "jsdom": "^26.0.0"
+  },
+  "devDependencies": {
+    "@mozilla/readability": "^0.5.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.7",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/yargs": "^17.0.33",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.3",
+    "yaml": "^2.7.0",
+    "yargs": "^17.7.2"
+  }
+}
