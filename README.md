@@ -14,17 +14,31 @@ We use PGP Ed25519 for signing and the Hypercore Protocol for the distributed st
 
 ## Quick Start (wip)
 
-1. Install the catarch CLI:
-
 ```bash
-npm install -g @cat-wiki/cli
-```
+npm install -g @cat-wiki/arch
 
-2. Run the CLI:
-
-```bash
 catarch --help
 ```
+
+```bash
+catarch
+
+Crawl the CAT Force tracker
+
+Commands:
+  catarch crawl       Crawl the CAT Force tracker                      [default]
+  catarch list        List the trackers entries
+  catarch search      Search the trackers entries
+  catarch serve       Serve / Mirror the tracker
+  catarch completion  generate completion script
+
+Options:
+      --version  Show version number                                   [boolean]
+      --help     Show help                                             [boolean]
+  -t, --tracker  Tracker to crawl
+                    [string] [required] [default: "https://tracker.devcat.wiki"]
+```
+
 
 ## Development Setup
 
