@@ -2,6 +2,8 @@
 
 The Consumer Action Taskforce Archive helps keeping track of EULA/TOS and other agreements.
 
+[NPM](https://www.npmjs.com/package/@cat-wiki/arch)
+
 This is a work in progress.
 
 ## Overview
