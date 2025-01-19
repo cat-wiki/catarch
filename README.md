@@ -1,10 +1,12 @@
 # Cat Archive
 
+> This is a work in progress ![Warning](https://img.shields.io/badge/-Warning-red) 
+
 The Consumer Action Taskforce Archive helps keeping track of EULA/TOS and other agreements.
 
-[NPM](https://www.npmjs.com/package/@cat-wiki/arch)
+The main goal is to have some tooling for crawling, diffing and archiving legal documents in a way which can be integrated into the [CAT Wiki](https://wiki.rossmanngroup.com/).
 
-This is a work in progress.
+[NPM](https://www.npmjs.com/package/@cat-wiki/arch)
 
 ## Overview
 
